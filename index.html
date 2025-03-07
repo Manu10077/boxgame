@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click the Box Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+</head>
+<body>
+  <h1>Click the Moving Box!</h1>
+  
+  <div id="authSection">
+    <button id="googleSignIn">Sign in with Google</button>
+    <button id="signOut" style="display: none;">Sign Out</button>
+    <p id="userInfo" style="display: none;"></p>
+  </div>
+
+  <p>Score: <span id="score">0</span></p>
+  <div id="gameArea">
+    <div id="box"></div>
+  </div>
+  <button id="startButton">Start Game</button>
+
+  <!-- Leaderboard Section -->
+  <div id="leaderboardSection">
+    <h2>Leaderboard</h2>
+    <ul id="leaderboard"></ul>
+  </div>
+
+  <script src="firebaseConfig.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
